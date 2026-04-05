@@ -225,34 +225,77 @@
     </section>
 
     <section id="apply" class="py-24 px-4 bg-brand-beige">
-        <div class="max-w-xl mx-auto bg-white p-8 md:p-12 rounded-[3rem] card-shadow">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold mb-4 text-brand-green">Оставить заявку</h2>
-                <p class="text-slate-500">За месяц со мной вы начнете реально действовать!</p>
+    <div class="max-w-xl mx-auto bg-white p-8 md:p-12 rounded-[3rem] card-shadow">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold mb-4 text-brand-green font-serif">Оставить заявку</h2>
+            <p class="text-slate-500">За месяц со мной вы начнете реально действовать!</p>
+        </div>
+
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+            <input type="hidden" name="access_key" value="5e862fb0-e1f5-46a2-8b58-c19200f70ce2">
+            <input type="hidden" name="subject" value="Новая заявка: Индивидуальное сопровождение за месяц">
+            
+            <div class="space-y-2">
+                <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-4">Ваше имя</label>
+                <input type="text" name="name" required class="w-full px-8 py-5 rounded-full bg-brand-beige border-none focus:ring-2 focus:ring-brand-green outline-none transition-all">
             </div>
 
-            <form action="https://api.web3forms.com/submit" method="POST" onsubmit="ym(108405757,'reachGoal','formagoals'); return true;" class="space-y-6">
-                <input type="hidden" name="access_key" value="5e862fb0-e1f5-46a2-8b58-c19200f70ce2">
-                <input type="hidden" name="subject" value="Новая заявка: Индивидуальное сопровождение за месяц">
-                
-                <div class="space-y-2">
-                    <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-4">Ваше имя</label>
-                    <input type="text" name="name" required class="w-full px-8 py-5 rounded-full bg-brand-beige border-none focus:ring-2 focus:ring-brand-green outline-none transition-all">
-                </div>
+            <div class="space-y-2">
+                <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-4">Контакты (Тел / TG / WA)</label>
+                <input type="text" name="contact" required placeholder="@username или номер" class="w-full px-8 py-5 rounded-full bg-brand-beige border-none focus:ring-2 focus:ring-brand-green outline-none transition-all">
+            </div>
 
-                <div class="space-y-2">
-                    <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-4">Контакты (Тел / TG / WA)</label>
-                    <input type="text" name="contact" required placeholder="@username или номер" class="w-full px-8 py-5 rounded-full bg-brand-beige border-none focus:ring-2 focus:ring-brand-green outline-none transition-all">
-                </div>
+            <button type="submit" id="submit-btn" class="w-full bg-brand-green hover:bg-opacity-90 text-white font-bold py-6 rounded-full shadow-xl transition-all active:scale-95 mt-6 text-sm uppercase tracking-[0.2em]">
+                Забронировать место
+            </button>
+            
+            <div id="result-message" class="hidden mt-6 p-6 rounded-[2rem] bg-brand-light-green text-brand-green text-center font-medium">
+                Заявка принята, я свяжусь с вами в рабочее время!
+            </div>
+        </form>
+    </div>
 
-                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+    <script>
+        const form = document.getElementById('contact-form');
+        const result = document.getElementById('result-message');
+        const btn = document.getElementById('submit-btn');
 
-                <button type="submit" class="w-full bg-brand-green hover:bg-opacity-90 text-white font-bold py-6 rounded-full shadow-xl transition-all active:scale-95 mt-6 text-sm uppercase tracking-[0.2em]">
-                    Забронировать место
-                </button>
-            </form>
-        </div>
-    </section>
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Отменяем стандартный редирект
+
+            // Вызов цели Яндекс Метрики
+            if (typeof ym !== 'undefined') {
+                ym(108405757, 'reachGoal', 'formagoals');
+            }
+
+            const formData = new FormData(form);
+            btn.disabled = true;
+            btn.innerText = "Отправка...";
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(async (response) => {
+                if (response.status == 200) {
+                    // Успешная отправка
+                    form.reset();
+                    btn.classList.add('hidden');
+                    result.classList.remove('hidden');
+                } else {
+                    alert("Произошла ошибка. Попробуйте позже.");
+                    btn.disabled = false;
+                    btn.innerText = "Забронировать место";
+                }
+            })
+            .catch(error => {
+                alert("Ошибка сети. Проверьте интернет-соединение.");
+                btn.disabled = false;
+                btn.innerText = "Забронировать место";
+            });
+        });
+    </script>
+</section>
 
     <footer class="py-12 text-center text-slate-400 text-[10px] tracking-[0.3em] uppercase bg-white">
         &copy; 2024 Наталья Ульянова. Психолог с 30-летним опытом.
