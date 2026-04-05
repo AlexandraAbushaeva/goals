@@ -31,6 +31,20 @@
 </head>
 <body class="text-slate-800">
 
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108405757', 'ym');
+
+    ym(108405757, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108405757" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
     <header class="min-h-screen flex flex-col items-center justify-center px-4 py-16 max-w-6xl mx-auto lg:flex-row gap-12">
         <div class="lg:w-1/2 space-y-6 text-center lg:text-left">
             <span class="inline-block px-4 py-1 bg-brand-light-green text-brand-green rounded-full text-sm font-semibold tracking-wide shadow-sm">
@@ -217,7 +231,7 @@
                 <p class="text-slate-500">За месяц со мной вы начнете реально действовать!</p>
             </div>
 
-            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+            <form action="https://api.web3forms.com/submit" method="POST" onsubmit="ym(108405757,'reachGoal','formagoals'); return true;" class="space-y-6">
                 <input type="hidden" name="access_key" value="5e862fb0-e1f5-46a2-8b58-c19200f70ce2">
                 <input type="hidden" name="subject" value="Новая заявка: Индивидуальное сопровождение за месяц">
                 
