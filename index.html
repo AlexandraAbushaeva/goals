@@ -24,255 +24,223 @@
         }
     </script>
     <style>
-        body { background-color: #f9f7f2; scroll-behavior: smooth; }
-        .serif-title { font-family: 'Playfair Display', serif; }
-        .accent-italic { font-family: 'Playfair Display', serif; font-style: italic; color: #2d5a43; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #f9f7f2; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
         .card-shadow { box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05); }
     </style>
 </head>
 <body class="text-slate-800">
 
-    <header class="min-h-screen flex flex-col items-center justify-center px-4 py-16 max-w-7xl mx-auto lg:flex-row gap-12">
-        <div class="lg:w-1/2 space-y-8 text-center lg:text-left">
-            <span class="inline-block px-4 py-1 bg-brand-light-green text-brand-green rounded-full text-xs font-bold tracking-widest uppercase">
-                • Психологическое онлайн-сопровождение
+    <header class="min-h-screen flex flex-col items-center justify-center px-4 py-16 max-w-6xl mx-auto lg:flex-row gap-12">
+        <div class="lg:w-1/2 space-y-6 text-center lg:text-left">
+            <span class="inline-block px-4 py-1 bg-brand-light-green text-brand-green rounded-full text-sm font-semibold tracking-wide shadow-sm">
+                Осталось 3 места
             </span>
-            <h1 class="text-5xl md:text-7xl font-bold leading-tight text-slate-900 serif-title">
-                Найдите <span class="accent-italic">себя</span> <br> снова
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight text-slate-900">
+                Достигни своей цели <span class="text-brand-green italic">за месяц</span>
             </h1>
-            <p class="text-lg text-slate-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                Чувствуете, что застряли на месте? Вроде и цели есть, и планы написаны, но сложно начать действовать? Иногда нам просто не хватает системы и профессионального взгляда со стороны, чтобы совершить рывок.
+            <p class="text-lg text-slate-600 leading-relaxed">
+                Чувствуете, что застряли на месте? Вроде и цели есть, и планы написаны, но сложно начать дейстовать? Иногда нам просто не хватает системы и профессионального взгляда со стороны, чтобы совершить рывок.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                <a href="#apply" class="bg-brand-green hover:bg-opacity-90 text-white px-8 py-4 rounded-full font-semibold text-sm transition-all shadow-lg flex items-center justify-center gap-2">
-                    Записаться на сопровождение <span class="text-xl">→</span>
+            <div class="pt-4">
+                <a href="#apply" class="bg-brand-green hover:bg-opacity-90 text-white px-10 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg inline-block">
+                    Начать действовать
                 </a>
-                <div class="flex items-center gap-8 justify-center mt-6 lg:mt-0 border-t lg:border-t-0 lg:border-l border-slate-200 pt-6 lg:pt-0 lg:pl-8">
-                    <div>
-                        <div class="text-2xl font-bold serif-title text-brand-green">30</div>
-                        <div class="text-[10px] uppercase tracking-tighter text-slate-400">лет опыта</div>
-                    </div>
-                    <div>
-                        <div class="text-2xl font-bold serif-title text-brand-green">1000+</div>
-                        <div class="text-[10px] uppercase tracking-tighter text-slate-400">клиентов</div>
-                    </div>
-                </div>
             </div>
         </div>
 
-        <div class="lg:w-1/2 w-full flex justify-center relative">
-            <div class="absolute inset-0 bg-brand-light-green rounded-[3rem] translate-x-4 translate-y-4 -z-10"></div>
-            <div class="relative w-full max-w-md aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-2xl border-[12px] border-white/50">
+        <div class="lg:w-1/2 w-full max-w-md">
+            <div class="aspect-[3/4] bg-brand-light-green rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white relative">
                 <img src="photo.jpg" alt="Наталья Ульянова" class="w-full h-full object-cover">
-                
-                <div class="absolute top-6 -right-4 bg-white px-4 py-2 rounded-xl shadow-md text-[10px] leading-tight border border-slate-100">
-                    <span class="font-bold block text-brand-green">Конфиденциально</span>
-                    Безопасное пространство
-                </div>
-                <div class="absolute bottom-8 -left-4 bg-white/90 backdrop-blur px-4 py-3 rounded-2xl shadow-lg border border-white flex items-center gap-3">
-                    <div class="w-8 h-8 bg-brand-light-green rounded-full flex items-center justify-center text-brand-green">★</div>
-                    <div class="text-[10px]">
-                        <span class="font-bold block">Онлайн-сопровождение</span>
-                        Запись доступна
-                    </div>
-                </div>
             </div>
         </div>
     </header>
 
-    <section class="bg-white py-24 px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row gap-16 items-center">
-                <div class="md:w-3/5 space-y-8">
-                    <div class="space-y-2">
-                        <span class="text-brand-green font-bold text-xs uppercase tracking-widest">Обо мне</span>
-                        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 serif-title">
-                            Кто я такая?
-                        </h2>
-                    </div>
-                    <h3 class="text-2xl font-bold text-brand-green serif-title italic">
+    <section class="bg-white py-20 px-4 rounded-[3rem] mx-2 shadow-sm">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                
+                <div class="md:w-3/5 space-y-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+                        Кто я такая?
+                    </h2>
+                    <h3 class="text-xl font-bold text-brand-green uppercase tracking-wider">
                         Наталья Ульянова
                     </h3>
-                    <div class="space-y-6 text-slate-600 text-lg leading-relaxed">
-                        <p class="font-medium text-slate-800">
-                            Психолог с 30-летним стажем. Помогаю не просто «пережить» трудности, а выйти на новый уровень качества жизни.
+                    <p class="text-lg text-slate-700 font-semibold italic border-l-4 border-brand-green pl-4">
+                        Психолог с 30-летним стажем. Помогаю не просто «пережить» трудности, а выйти на новый уровень качества жизни.
+                    </p>
+                    
+                    <div class="space-y-4 text-slate-600 leading-relaxed">
+                        <p>
+                            За 30 лет практики я видела сотни историй. Мой опыт позволяет мне быстро находить <b>истинные причины</b> того, почему вы застряли. Мы не будем тратить время на пустые разговоры — мы пойдем в глубину, чтобы убрать внутреннее напряжение и страхи.
                         </p>
                         <p>
-                            За 30 лет практики я видела сотни историй. Мой опыт позволяет мне быстро находить <span class="text-brand-green font-semibold italic">истинные причины</span> того, почему вы застряли. Мы не будем тратить время на пустые разговоры — мы пойдем в глубину.
+                            Со мной клиенты учатся быть <b>устойчивыми, спокойными и по-настоящему свободными</b> от чужих манипуляций и собственных ограничений. Моя цель — чтобы через месяц вы почувствовали себя счастливым человеком, имеющим право на выбор.
                         </p>
-                        <p>
-                            Со мной клиенты учатся быть <b>устойчивыми и свободными</b>. Моя цель — чтобы через месяц вы почувствовали себя счастливым человеком, имеющим право на выбор.
-                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="p-6 bg-brand-light-green rounded-[2rem] card-shadow">
+                            <div class="text-3xl font-bold text-brand-green">30 лет</div>
+                            <div class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">Практического опыта</div>
+                        </div>
+                        <div class="p-6 bg-brand-light-green rounded-[2rem] card-shadow">
+                            <div class="text-3xl font-bold text-brand-green">100%</div>
+                            <div class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">Конфиденциальность</div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="md:w-2/5 w-full">
-                    <div class="relative p-4">
-                        <div class="absolute inset-0 bg-brand-light-green rounded-[3rem] -rotate-3"></div>
-                        <div class="relative aspect-square rounded-[2.5rem] overflow-hidden border-8 border-white shadow-xl bg-slate-100">
-                             <img src="about-photo.jpg" alt="Наталья Ульянова" class="w-full h-full object-cover">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-brand-light-green rounded-[3rem] rotate-3 opacity-50"></div>
+                        <div class="relative bg-slate-200 aspect-square rounded-[2.5rem] overflow-hidden border-8 border-white shadow-xl">
+                             <img src="about-photo.jpg" alt="Наталья Ульянова за работой" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section class="bg-brand-green py-24 px-4 text-white">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-                <div class="space-y-4">
-                    <span class="text-brand-light-green font-bold text-xs uppercase tracking-widest">Результат</span>
-                    <h2 class="text-4xl md:text-5xl font-bold serif-title">Узнаете <span class="accent-italic !text-brand-light-green text-white">себя</span> здесь?</h2>
-                </div>
-                <p class="text-brand-light-green/80 max-w-md text-right text-sm italic">
-                    Моя задача — помочь вам перестать откладывать жизнь на потом и наконец-то начать действовать.
+    <section class="py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Чего вы достигнете за месяц?</h2>
+                <p class="text-xl text-brand-green font-semibold italic leading-relaxed max-w-3xl mx-auto text-center">
+                    Моя задача как психолога с 30-летним опытом — помочь вам перестать откладывать жизнь на потом и наконец-то начать действовать.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="space-y-4">
-                    <div class="group border border-white/20 rounded-2xl p-6 hover:bg-white/5 transition-all">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-4">
-                                <span class="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-xs">01</span>
-                                <h3 class="text-xl font-bold serif-title">Определите истинные желания</h3>
-                            </div>
-                            <span class="text-xl opacity-50">+</span>
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="space-y-6">
+                    <div class="flex gap-6 p-6 rounded-[2rem] border border-brand-light-green hover:bg-white transition-all">
+                        <div class="flex-shrink-0 w-12 h-12 bg-brand-green text-white rounded-full flex items-center justify-center font-bold shadow-lg">01</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2 font-serif">Определите истинные желания</h3>
+                            <p class="text-slate-600 text-sm">Мы отсеем чужие ожидания и поймем, чего хотите именно вы. Когда цель "ваша", энергия на её достижение появляется сама собой.</p>
                         </div>
-                        <p class="mt-4 text-brand-light-green/70 text-sm leading-relaxed">Мы отсеем чужие ожидания и поймем, чего хотите именно вы. Когда цель "ваша", энергия появляется сама собой.</p>
                     </div>
 
-                    <div class="group border border-white/20 rounded-2xl p-6 hover:bg-white/5 transition-all">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-4">
-                                <span class="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-xs">02</span>
-                                <h3 class="text-xl font-bold serif-title">Расставите приоритеты</h3>
-                            </div>
-                            <span class="text-xl opacity-50">+</span>
+                    <div class="flex gap-6 p-6 rounded-[2rem] border border-brand-light-green hover:bg-white transition-all">
+                        <div class="flex-shrink-0 w-12 h-12 bg-brand-green text-white rounded-full flex items-center justify-center font-bold shadow-lg">02</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2 font-serif">Расставите приоритеты</h3>
+                            <p class="text-slate-600 text-sm">Хаос в голове превратится в четкую структуру. Вы поймете, за что хвататься в первую очередь и что даст максимальный результат.</p>
                         </div>
-                        <p class="mt-4 text-brand-light-green/70 text-sm leading-relaxed">Хаос в голове превратится в четкую структуру. Вы поймете, за что хвататься в первую очередь.</p>
                     </div>
-                </div>
 
-                <div class="bg-white rounded-[2.5rem] p-8 md:p-12 text-slate-900 shadow-2xl">
-                    <h3 class="text-2xl font-bold serif-title mb-8 text-brand-green">Итог месяца работы:</h3>
-                    <ul class="space-y-6">
-                        <li class="flex gap-4 items-start">
-                            <span class="text-brand-green font-bold">🚀</span>
-                            <span class="text-sm">Вы наконец-то <b>начнете менять свою жизнь</b></span>
-                        </li>
-                        <li class="flex gap-4 items-start">
-                            <span class="text-brand-green font-bold">💎</span>
-                            <span class="text-sm">Получите <b>видимые результаты</b> уже за 4 недели</span>
-                        </li>
-                        <li class="flex gap-4 items-start">
-                            <span class="text-brand-green font-bold">🕊️</span>
-                            <span class="text-sm">Обретете <b>уверенность и спокойствие</b> вместо тревоги</span>
-                        </li>
-                        <li class="flex gap-4 items-start">
-                            <span class="text-brand-green font-bold">🎨</span>
-                            <span class="text-sm">Начнете создавать ту жизнь, которой <b>хотите жить</b></span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-4 bg-brand-beige">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-center serif-title text-3xl font-bold mb-16 text-slate-900">С какими сферами работаем:</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-brand-light-green p-10 rounded-[2.5rem] space-y-6 card-shadow relative overflow-hidden">
-                    <span class="text-slate-300 font-serif text-6xl absolute top-4 left-6 opacity-40">01</span>
-                    <div class="relative">
-                        <h3 class="text-xl font-bold serif-title mb-4">Отношения</h3>
-                        <p class="text-sm text-slate-600">Наладить общение, вернуть доверие и найти точки опоры в паре или семье.</p>
-                        <div class="flex gap-2 mt-6 flex-wrap">
-                            <span class="bg-white/50 px-3 py-1 rounded-full text-[10px]">Конфликты</span>
-                            <span class="bg-white/50 px-3 py-1 rounded-full text-[10px]">Близость</span>
+                    <div class="flex gap-6 p-6 rounded-[2rem] border border-brand-light-green hover:bg-white transition-all">
+                        <div class="flex-shrink-0 w-12 h-12 bg-brand-green text-white rounded-full flex items-center justify-center font-bold shadow-lg">03</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2 font-serif">Перейдете к реальным действиям</h3>
+                            <p class="text-slate-600 text-sm">Хватит планировать! Мы определим конкретные шаги, проработаем страхи и внутренние преграды, которые мешали сделать первый рывок.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-[#fdeee7] p-10 rounded-[2.5rem] space-y-6 card-shadow relative overflow-hidden">
-                    <span class="text-slate-300 font-serif text-6xl absolute top-4 left-6 opacity-40">02</span>
-                    <div class="relative">
-                        <h3 class="text-xl font-bold serif-title mb-4">Профессия</h3>
-                        <p class="text-sm text-slate-600">Поиск дела жизни, борьба с выгоранием и увеличение личной эффективности.</p>
-                        <div class="flex gap-2 mt-6 flex-wrap">
-                            <span class="bg-white/50 px-3 py-1 rounded-full text-[10px]">Карьера</span>
-                            <span class="bg-white/50 px-3 py-1 rounded-full text-[10px]">Доход</span>
+                <div class="bg-brand-green p-10 rounded-[3rem] text-white flex flex-col justify-center shadow-2xl relative overflow-hidden">
+                    <h3 class="text-2xl font-bold mb-8 font-serif">Итог месяца работы:</h3>
+                    <div class="space-y-6">
+                        <div class="flex gap-4 items-center text-lg">
+                            <span class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">🚀</span>
+                            <span>Вы наконец-то <b>начнете менять свою жизнь</b></span>
+                        </div>
+                        <div class="flex gap-4 items-center text-lg">
+                            <span class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">💎</span>
+                            <span>Получите <b>видимые результаты</b> уже за 4 недели</span>
+                        </div>
+                        <div class="flex gap-4 items-center text-lg">
+                            <span class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">🕊️</span>
+                            <span>Обретете <b>уверенность и спокойствие</b> вместо тревоги</span>
+                        </div>
+                        <div class="flex gap-4 items-center text-lg">
+                            <span class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">🎨</span>
+                            <span>Начнете создавать ту жизнь, которой <b>хотите жить</b></span>
                         </div>
                     </div>
-                </div>
-
-                <div class="bg-[#eef5f1] p-10 rounded-[2.5rem] space-y-6 card-shadow relative overflow-hidden">
-                    <span class="text-slate-300 font-serif text-6xl absolute top-4 left-6 opacity-40">03</span>
-                    <div class="relative">
-                        <h3 class="text-xl font-bold serif-title mb-4">Самооценка</h3>
-                        <p class="text-sm text-slate-600">Обретение уверенности, работа с тревогой и выстраивание личных границ.</p>
-                        <div class="flex gap-2 mt-6 flex-wrap">
-                            <span class="bg-white/50 px-3 py-1 rounded-full text-[10px]">Уверенность</span>
-                            <span class="bg-white/50 px-3 py-1 rounded-full text-[10px]">Спокойствие</span>
-                        </div>
+                    <div class="mt-10 pt-8 border-t border-white/10">
+                        <p class="text-sm text-brand-light-green/70 italic">Я буду сопровождать вас на каждом шагу, делая процесс изменений безопасным и эффективным.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-4 bg-white">
-        <div class="max-w-4xl mx-auto bg-brand-green text-white rounded-[3rem] p-12 relative overflow-hidden shadow-2xl">
-            <h2 class="text-3xl font-bold serif-title mb-10">Формат сопровождения</h2>
-            <div class="grid md:grid-cols-2 gap-10 relative z-10">
-                <div class="flex gap-6 items-center">
-                    <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-2xl border border-white/20">🎥</div>
-                    <p class="font-medium">Сессия раз в неделю (онлайн или офлайн)</p>
+    <section class="py-20 px-4 bg-brand-beige">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-xs uppercase tracking-[0.3em] font-bold text-slate-400 mb-12">С какими сферами работаем</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-8 rounded-[2.5rem] card-shadow flex flex-col items-center gap-4 transition-transform hover:-translate-y-2">
+                    <span class="text-4xl mb-2">❤️</span>
+                    <span class="font-bold font-serif text-lg">Отношения</span>
                 </div>
-                <div class="flex gap-6 items-center">
-                    <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-2xl border border-white/20">💬</div>
-                    <p class="font-medium">Контрольная переписка в течение недели</p>
+                <div class="bg-white p-8 rounded-[2.5rem] card-shadow flex flex-col items-center gap-4 transition-transform hover:-translate-y-2">
+                    <span class="text-4xl mb-2">💼</span>
+                    <span class="font-bold font-serif text-lg">Профессия и доход</span>
+                </div>
+                <div class="bg-white p-8 rounded-[2.5rem] card-shadow flex flex-col items-center gap-4 transition-transform hover:-translate-y-2">
+                    <span class="text-4xl mb-2">🌿</span>
+                    <span class="font-bold font-serif text-lg">Самооценка</span>
                 </div>
             </div>
-            <div class="mt-12 pt-10 border-t border-white/10 accent-italic !text-brand-light-green opacity-80 text-xl">
-                "Мы не просто говорим. Мы диагностируем реальность и создаем вашу новую историю."
+        </div>
+    </section>
+
+    <section class="py-20 px-4 bg-white rounded-t-[3rem]">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-brand-green text-white rounded-[3rem] p-8 md:p-14 shadow-2xl relative overflow-hidden">
+                <h2 class="text-3xl font-bold mb-10 font-serif italic text-brand-light-green">Формат сопровождения:</h2>
+                <div class="grid md:grid-cols-2 gap-10 relative z-10">
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 bg-white/10 rounded-[1.5rem] flex items-center justify-center text-3xl border border-white/10">🎥</div>
+                        <p class="text-lg font-medium">Сессия раз в неделю (онлайн или офлайн)</p>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 bg-white/10 rounded-[1.5rem] flex items-center justify-center text-3xl border border-white/10">💬</div>
+                        <p class="text-lg font-medium">Контрольная переписка еженедельно</p>
+                    </div>
+                </div>
+                <div class="mt-12 pt-8 border-t border-white/10 text-brand-light-green/80 italic leading-relaxed text-lg">
+                    "Мы не просто «поговорим». Мы продиагностируем реальность, поставим четкие цели и проработаем внутренние преграды."
+                </div>
             </div>
         </div>
     </section>
 
     <section id="apply" class="py-24 px-4 bg-brand-beige">
-        <div class="max-w-xl mx-auto bg-white p-10 md:p-14 rounded-[3rem] card-shadow border border-slate-100">
-            <div class="text-center mb-10 space-y-2">
-                <h2 class="text-4xl font-bold serif-title text-brand-green">Оставить заявку</h2>
-                <p class="text-slate-500">Сделайте первый шаг к переменам</p>
+        <div class="max-w-xl mx-auto bg-white p-8 md:p-12 rounded-[3rem] card-shadow">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-4 text-brand-green">Оставить заявку</h2>
+                <p class="text-slate-500">За месяц со мной вы начнете реально действовать!</p>
             </div>
 
             <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
                 <input type="hidden" name="access_key" value="5e862fb0-e1f5-46a2-8b58-c19200f70ce2">
-                <input type="hidden" name="subject" value="Новая заявка: Сопровождение 30 дней">
+                <input type="hidden" name="subject" value="Новая заявка: Индивидуальное сопровождение за месяц">
                 
                 <div class="space-y-2">
                     <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-4">Ваше имя</label>
-                    <input type="text" name="name" required class="w-full px-6 py-4 rounded-full border border-slate-100 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-brand-green outline-none transition-all">
+                    <input type="text" name="name" required class="w-full px-8 py-5 rounded-full bg-brand-beige border-none focus:ring-2 focus:ring-brand-green outline-none transition-all">
                 </div>
 
                 <div class="space-y-2">
-                    <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-4">Контакты (TG/WhatsApp/VK)</label>
-                    <input type="text" name="contact" required placeholder="@username или номер" class="w-full px-6 py-4 rounded-full border border-slate-100 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-brand-green outline-none transition-all">
+                    <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-4">Контакты (Тел / TG / WA)</label>
+                    <input type="text" name="contact" required placeholder="@username или номер" class="w-full px-8 py-5 rounded-full bg-brand-beige border-none focus:ring-2 focus:ring-brand-green outline-none transition-all">
                 </div>
 
                 <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
-                <button type="submit" class="w-full bg-brand-green hover:bg-opacity-90 text-white font-bold py-5 rounded-full shadow-xl transition-all active:scale-95 text-sm uppercase tracking-widest">
-                    Отправить запрос
+                <button type="submit" class="w-full bg-brand-green hover:bg-opacity-90 text-white font-bold py-6 rounded-full shadow-xl transition-all active:scale-95 mt-6 text-sm uppercase tracking-[0.2em]">
+                    Забронировать место
                 </button>
             </form>
         </div>
     </section>
 
-    <footer class="py-16 text-center text-slate-400 text-[10px] tracking-widest uppercase bg-white">
+    <footer class="py-12 text-center text-slate-400 text-[10px] tracking-[0.3em] uppercase bg-white">
         &copy; 2024 Наталья Ульянова. Психолог с 30-летним опытом.
     </footer>
 
